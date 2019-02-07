@@ -1,0 +1,17 @@
+create table Department (
+	department_id int(20) not null PRIMARY key,
+    department_name varchar(30) not null
+)
+
+create table Instructor (
+	instructor_id int(20) not null PRIMARY key,
+    first_name varchar(30) not null,
+    last_name varchar(30) not null,
+    middle_name varchar(30) not null,
+    department int(20) not null,
+    status varchar(30) not null,
+    FOREIGN key (department) REFERENCES Department(department_id)
+)
+
+insert into instructor values ("123", "aaaaaaa", "werwe", "awe", "single", "")
+insert into department values ("111","paul")
